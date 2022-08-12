@@ -28,16 +28,16 @@
 \maketitle
 
 \begin{comment}
-https://www.overleaf.com/project/62cd692e2c2418ea46faba62
 
 Goals: 
 * Introduce the problems we are solving in web3
 * Introduce our approach and our solutions to reliability, scalability, and upgradeability while preserving decentralization
-* Differentiate our approach from other competitors in the web3 space
-Provide the appropriate level of detail - especially for future work (more detail on areas we have more information and more directional on areas we still need to do research/eng).  We will not lock ourselves into any irreversible changes.
-Terminology
+* Differentiate our approach from others in the web3 space
+Provide the appropriate level of detail - especially for future work (more detail on areas we have more information and more directional on areas we still need to do research/eng)
+
+Terminology:
 * Nodes - full nodes or validators
-* uppercase Internet
+* Uppercase Internet
 * Aptos blockchain - do not use Aptos protocol
 * up-to-date, not up to date
 * Ledger state and ledger history
@@ -48,8 +48,8 @@ Terminology
 * dApp is out-of-date, just applications are fine.
 * high throughput not high-throughput
 
-Formatting
-* After end{list}, start the next sentence immediately so the indent is far to the left for looks
+Formatting:
+* After end{itemize} or end{enumerate}, start the next sentence immediately so the indent is far to the left instead of indented
 
 \end{comment}
 
@@ -417,7 +417,6 @@ On-chain governance can, over time, be deployed across the entire upgrade manage
 \item Validators upgrade their software to the new release.
 \item Token holders vote on-chain to enable the new signature scheme, the on-chain configuration is updated, and the change takes effect.
 \end{enumerate}
-
 As an open source project, the Aptos blockchain will depend on strong community feedback and use on-chain governance to manage the appropriate processes. Off-chain upgrade enablement may still be required under certain conditions, but will be minimized over time.
 
 \subsection{Proof-of-stake consensus}
