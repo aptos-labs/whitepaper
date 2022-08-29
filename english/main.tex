@@ -1,7 +1,6 @@
 \documentclass{article}
 
 % Language setting
-% Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
 \usepackage{listings}
 \usepackage{minted}
@@ -26,32 +25,6 @@
 
 \begin{document}
 \maketitle
-
-\begin{comment}
-
-Goals: 
-* Introduce the problems we are solving in web3
-* Introduce our approach and our solutions to reliability, scalability, and upgradeability while preserving decentralization
-* Differentiate our approach from others in the web3 space
-Provide the appropriate level of detail - especially for future work (more detail on areas we have more information and more directional on areas we still need to do research/eng)
-
-Terminology:
-* Nodes - full nodes or validators
-* Uppercase Internet
-* Aptos blockchain - do not use Aptos protocol
-* up-to-date, not up to date
-* Ledger state and ledger history
-* Avoid the word database in the context of blockchain
-* trade-offs not tradeoff
-* upgradeable, not upgradable
-* web3, not Web3 unless at the beginning of a sentence.
-* dApp is out-of-date, just applications are fine.
-* high throughput not high-throughput
-
-Formatting:
-* After end{itemize} or end{enumerate}, start the next sentence immediately so the indent is far to the left instead of indented
-
-\end{comment}
 
 \begin{abstract}
 The rise of blockchains as a new Internet infrastructure has led to developers deploying tens of thousands of decentralized applications at rapidly growing rates. Unfortunately, blockchain usage is not yet ubiquitous due to frequent outages, high costs, low throughput limits, and numerous security concerns. To enable mass adoption in the web3 era, blockchain infrastructure needs to follow the path of cloud infrastructure as a trusted, scalable, cost-efficient, and continually improving platform for building widely-used applications. 
@@ -226,8 +199,6 @@ Signing a transaction means that the signer authorizes the transaction to be com
 
 As discussed in Section \ref{sec:accounts}, Aptos accounts support key rotation, an important feature that can help reduce the risks associated with private key compromise, long-range attacks, and future advances that might break existing cryptographic algorithms.  In addition, Aptos accounts are also flexible enough to enable new hybrid models of custody. In one such model, a user can delegate the ability to rotate the account's private key to one or more custodians and other trusted entities. A Move module can then define a policy that empowers these trusted entities to rotate the key under specific circumstances. For example, the entities might be represented by a $k$-out-of-$n$ multi-sig key held by many trusted parties and offer key recovery services to prevent user key loss (e.g., 20\% of Bitcoin is currently locked up in unrecoverable accounts \cite{lost_passwords}). 
 
-%Furthermore, the ability to rotate the keys may require that the account be dormant for a certain period of time. In this case, the user may delegate this ability to a cold wallet.
- 
 Moreover, while many wallets support various key recovery schemes, such as backing up private keys to cloud infrastructure, multi-party computation, and social recovery, they are typically implemented without blockchain support (i.e., off-chain). As a result, each wallet needs to implement its own key management infrastructure and related operations become opaque to users. In contrast, supporting key management functionality at the Aptos blockchain layer provides full transparency of all key-related operations and makes it simpler to implement a wallet with rich key management.
 
 \subsection{Pre-signing transaction transparency}
@@ -250,7 +221,7 @@ To maximize throughput, increase concurrency, and reduce engineering complexity,
 \begin{itemize}
 \item Clients can be notified when specific transactions have been included in a batch of persisted transactions. Persisted and valid transactions are highly likely to be committed imminently.
 \item Clients can be informed when a batch of persisted transactions has been ordered. Thus, to reduce the latency of determining the executed transaction outputs, clients can select to execute transactions locally rather than wait for the validators to complete execution remotely.
-\item Clients can elect to wait for certified transaction execution by the validators and perform state synchronization on the attested results (e.g., see section \ref{sub:state_sync}).
+\item Clients can elect to wait for certified transaction execution by the validators and perform state synchronization on the attested results (e.g., see Section \ref{sub:state_sync}).
 \end{itemize}
 The Aptos modular design aids development speed and supports faster release cycles, as changes can be targeted to individual modules, instead of a single monolithic architecture. Similarly, the modular design also provides a structured path to scaling validators beyond a single machine, providing access to additional compute, network, and storage resources. Figure \ref{fig:pipeline} shows the transaction life cycle across the various processing stages.
 
