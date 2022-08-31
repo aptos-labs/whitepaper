@@ -2,7 +2,7 @@
 
 Pull requests for factual corrections and language errors are welcome! Please do not submit pull requests for stylistic edits that are purely subjective.
 
-Pull requests need not contain a new pdf version. A maintainer can generate the pdf based on recent commits.
+PDF versions are stored in the aptos-core repo.
 
 ## Hints on compilation.
 
