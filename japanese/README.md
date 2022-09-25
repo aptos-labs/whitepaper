@@ -1,8 +1,8 @@
-# Aptos Labs Whitepaper
+# Aptos Labs Whitepaper (Japanese)
 
 Pull requests for factual corrections and language errors are welcome! Please do not submit pull requests for stylistic edits that are purely subjective.
 
-Pull requests need not contain a new pdf version. A maintainer can generate the pdf based on recent commits.
+PDF versions are stored in the [aptos-core repo](https://github.com/aptos-labs/aptos-core/tree/main/developer-docs-site/static/papers) and available on the [Aptos Labs website](https://aptos.dev/aptos-white-paper/aptos-white-paper-index).
 
 ## Hints on compilation.
 
@@ -14,3 +14,4 @@ How to compile LaTeX locally on Mac OS:
 
 1. Install mactex https://tug.org/mactex/mactex-download.html
 2. Install latex live utility: eg https://github.com/amaxwell/tlutility/releases
+
